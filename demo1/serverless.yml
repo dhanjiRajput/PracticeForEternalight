@@ -4,11 +4,19 @@ frameworkVersion: "4"
 provider:
   name: aws
   runtime: nodejs18.x
+  region: ap-south-1
 
 functions:
   youtubeHelloFn:
     handler: hello.handler
     events:
-      -httpAp:
-        path: /hello
-        method: GET
+      - httpApi: 
+          path: /hello
+          method: GET
+
+  youtubeByFn:
+    handler: by.handler
+    events:
+      - httpApi: 
+          path: /bye
+          method: GET

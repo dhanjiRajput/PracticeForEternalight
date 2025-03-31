@@ -1,0 +1,14 @@
+service: youtube-api
+frameworkVersion: "4"
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+
+functions:
+  youtubeHelloFn:
+    handler: hello.handler
+    events:
+      -httpAp:
+        path: /hello
+        method: GET

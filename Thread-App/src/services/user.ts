@@ -64,6 +64,9 @@ class userService{
 
         return token;
     }
+    public static decodeJWTToken(token:string){
+        return jwt.verify(token,secret);
+    }
 }
 
 export default  userService;

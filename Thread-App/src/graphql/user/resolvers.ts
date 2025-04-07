@@ -7,7 +7,7 @@ const queries={
             password:payload.password,
         });
         return token;
-    }
+    },
 };
 
 const mutations={
